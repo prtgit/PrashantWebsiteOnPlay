@@ -1,0 +1,253 @@
+@(message: String)
+
+<html lang="en">
+	<head>
+		<title> Prashant </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href='/assets/stylesheets/bootstrap.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href='/assets/stylesheets/font-awesome.css'>
+    <link rel="stylesheet" type="text/css" href='/assets/stylesheets/theme.css'>
+		<style type="text/css">
+			.sticky {
+  				position: fixed;
+  				top: 0;
+  				width: 100%
+			}
+			.content {
+  				padding: 16px;
+			}
+			.sticky + .content {
+  				padding-top: 60px;
+			}
+      .centered {
+        position: fixed; /* or absolute */
+        left: 20%;
+        right: 20%
+      }
+      body {
+        margin:0;
+        padding:0;
+      }
+      .content-heading{
+        font-size: 25px;
+      }
+      .thick-blue-border {
+        border-color: #008cba;
+        border-width: 3px;
+        border-style: solid;
+        border-radius: 50%;
+      }
+      p{
+        font-size: 18px;
+      }
+      .background1 {
+          background-image: url("/assets/images/Backround-collage.jpg");
+          background-repeat:no-repeat;
+
+          background-size:cover;
+      }
+      .jumbotron{
+          background-color: rgba(225,225,225,0.9);
+      }
+
+
+		</style>
+
+	</head>
+    <body class="background1">
+    @navbar()
+
+    <div class="container" style="margin: 150px 30px 30px 65px">
+      <div class="jumbotron content" >
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <img width="360" height="360" src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/19030506_1335034326552000_7605189012389472698_n.jpg?oh=ea1a9518490451f1db372a12d7c5ee42&oe=5AF60396" style=" margin: 35px 15px 35px 65px;"/>
+            <br/>
+            <div class="container" style="margin: 35px 15px 35px 15px">
+              <b class="content-heading">My Contact</b>
+              <br/><br/>
+              <!--
+                <a href="https://www.youracclaim.com/badges/5d771564-d013-422d-86e2-5eeb517e4b49/linked_in_profile" rel="prettyPhoto[portfolio1]" target="_blank"><img src="OCJP.jpg" width="282" height="200" alt="" /><span class="portfolio_zoom1"></span></a> -->
+              <table width="80%">
+                <tr>
+                  <td><b style="font-size: 16px">Phone Number</b>:</td>
+                  <td style="font-size: 16px">+1 919-527-3556</td>
+                </tr>
+                <tr>
+                  <td><b style="font-size: 16px">Email:</b></td>
+                  <td style="font-size: 16px">1) prtanksa@@ncsu.edu </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td style="font-size: 16px">2)prashant.tanksali93@@gmail.com  </td>
+                </tr>
+              </table>
+              <br/>
+            </div>
+            
+            <div class="container" style="margin: 35px 15px 35px 15px">
+              <b class="content-heading">Social Media</b>
+              <br/><br/>
+              <div class="container row">
+                
+                  <a style="margin-left: 5px" target="_blank" href="https://github.com/prtgit" class="btn btn-social-icon btn-github"><i class="fa fa-github"></i></a>
+                  <a style="margin-left: 5px" target="_blank" href="https://www.linkedin.com/in/prashant-tanksali/" class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a>
+                  <a style="margin-left: 5px" target="_blank" href="https://www.facebook.com/prashant.tanksali.7" class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a> 
+                  <a style="margin-left: 5px" target="_blank" href="https://twitter.com/prtanksali93" class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
+                
+              </div>
+            </div>
+            <div class="container" style="margin: 35px 15px 35px 15px">
+              <b class="content-heading">
+                
+                Reach Me <span aria-hidden="true" style="content: '\e111'"></span>
+              </b>
+
+                  
+                  <div class="form-group">
+                  <br/>
+                  <label for="Name">Name: </label>
+                  <input id="formName" type="text" name="Name" id="Name" value="" class="form-control" placeholder="Anonymous!!" />
+                  <br/>
+                  <label for="Comment">Message: </label>
+                    <textarea id="formMessage" name="Comment" id="Comment" class="form-control" placeholder="Something Nice..." ></textarea>
+                  <br/>
+                  <label for="ContactInfo">Contact Information: </label>
+                    <input id="formContactInfo" type="text" name="ContactInfo" id="ContactInfo" value="" class="form-control" placeholder="Will I spam you? YES!!" />
+                    <br/>
+                    <br/>
+                      <button id="formPost" class="form-control btn btn-success" >Send Message</button>
+                    </div>
+
+            </div>
+            <br/>
+            <div id="responseToMessage">
+
+            </div>
+        </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="container" style="margin: 35px 15px 35px 15px">
+              <b class="content-heading"> About Me </b>
+              <br/><br/>
+              <p>I am a Graduate Student at North Carolina State University majoring in Computer Networking (Computer Science). I enjoy problem solving and learning new programming languages and technologies.</p>
+              <p>My interests include Software Development, DevOps, Automation, IoT and Machine Learning.</p>
+              <p>I am a sports enthusiast and I love playing table tennis and cricket. I am a big fan of Rafael Nadal and Virat Kohli. I also enjoy traveling and eating.</p>
+            </div>
+
+            <div class="container" style="margin: 35px 15px 35px 15px">
+              <b class="content-heading">Work Experience</b>
+              <br/><br/>
+              <div class="row" id="divAccenture">
+                  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+                    <a href="https://www.accenture.com" target='_blank'>
+                      <img width="55" height="55" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Accenture-logo.png" class="thick-blue-border">
+                    </a>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-8">
+                    <table width="100%">
+                      <tr><b><i>Software Engineering Analyst, Accenture</i></b></tr><br/>
+                      <tr><i>Location:</i> Mumbai, India | <i>Duration:</i> 2 years </tr>
+                      <br/><br/>
+                      <p>
+                        I worked as an automation tool developer for various clients in domains like Capital Markets and Life Sciences. I learnt using web automation tools like Selenium and Sahi Pro and got a chance to collabarate with cross-cultural, multinational teams.  
+                      </p>
+                    </table>
+                  </div> 
+              </div>
+              <br/>  
+              <div class="row" id="divJohnCrane">
+                  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+                    <a href="https://www.johncrane.com/" target='_blank'>
+                      <img width="55" height="55" src="https://media-exp2.licdn.com/media/AAEAAQAAAAAAAARJAAAAJDQ4ZWQ4MGRjLTRmYjctNDUwNC04MWJiLTMwN2NhNjkzZjNhMQ.png" class="thick-blue-border">
+                    </a>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-8">
+                    <table width="100%">
+                      <tr><b><i>Software Engineering Intern, John Crane</i></b></tr><br/>
+                      <tr><i>Location:</i> Chicago, IL | <i>Duration:</i> 3 months </tr>
+                      <br/><br/>
+                      <p>
+                        I worked as a full-stack Python developer with the John Crane Sense team. I learnt web development using the web2py framework and also learnt how an enterprise IoT based system is implemented and deployed.    
+                      </p>
+                    </table>
+                  </div> 
+              </div>
+              <br/>
+              <div class="row" id="divNCState">
+                  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+                    <a href="https://www.ncsu.edu/" target='_blank'>
+                      <img width="55" height="55" src="https://brand.ncsu.edu/assets/logos/ncstate-brick-2x2-red-rgb.jpg" class="thick-blue-border">
+                    </a>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-8">
+                    <table width="100%">
+                      <tr><b><i>Research Assistant, NC State University</i></b></tr><br/>
+                      <tr><i>Location:</i> Raleigh, NC | <i>Duration:</i> 6 months </tr>
+                      <br/><br/>
+                      <p>
+                        I worked with Prof. Ed Gehringer to create exercises on various design patterns and also made contributions to the open source Ruby on Rails application 'Expertiza'.   
+                      </p>
+                    </table>
+                  </div> 
+              </div>
+              <br/>
+              <div class="row" id="divLandT">
+                  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+                    <a href="http://www.larsentoubro.com/" target='_blank'>
+                      <img width="55" height="55" src="http://images.jdmagicbox.com/pune/90/020p5089690/catalogue/larsen-toubro-limited-talegaon-dabhade-pune-j3oa4.jpg" class="thick-blue-border">
+                    </a>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-8">
+                    <table width="100%">
+                      <tr><b><i>Graduate Engineering Trainee, Larsen and Toubro</i></b></tr><br/>
+                      <tr><i>Location:</i> Mumbai, India | <i>Duration:</i> 2 months </tr>
+                      <br/><br/>
+                      <p>
+                        I worked as an intern at Larsen and Toubro Heavy Engineering division and I performed testing of electronic assemblies used in the control circuits of defense
+                        systems
+                      </p>
+                    </table>
+                  </div> 
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		
+	</body>
+    <script type="text/javascript">
+        $("#formPost").on("click",function (event) {
+            var name = $("#formName").val();
+            var message = $("#formMessage").val();
+            var contactInfo = $("#formContactInfo").val();
+            var user = {
+                name: name,
+                message: message,
+                contactInfo: contactInfo
+            };
+            var stringifiedUSer = JSON.stringify(user);
+            $.ajax({
+
+               url: "https://message-webs.herokuapp.com/sendMessage",
+               type: "POST",
+               dataType: 'json',
+               data: JSON.stringify(user),
+                success: function (data){
+                    $("#responseToMessage").val(data.message);
+                },
+                error: function (data) {
+                    $("#responseToMessage").val("Sorry! Couldn't get your message");
+                }
+            });
+
+        })
+    </script>
+</html>
